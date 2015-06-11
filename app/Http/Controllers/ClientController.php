@@ -5,7 +5,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\User;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreClientPostRequest;
 use Illuminate\Support\Facades\Auth;
 use Webpatser\Countries\Countries;
 
@@ -36,15 +36,17 @@ class ClientController extends Controller {
 		return view('forms.createClient',compact('countries'));
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store(Request $requests)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Requests\StoreClientPostRequest $requests
+     * @return Response
+     */
+	public function store(StoreClientPostRequest $request)
 	{
        // $user= new Client([]);
-		return $requests->firstName;
+
+       return Response::make('Friend added!');
 	}
 
 	/**
