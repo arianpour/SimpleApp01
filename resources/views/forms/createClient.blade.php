@@ -14,11 +14,10 @@
 		{!! Form::label('idNumber', 'IC/ passport No', ['class' => 'control-label']) !!}
 		{!! Form::text('idNumber', '', ['class' => 'form-control']) !!}
 		{!! Form::label('Nationality', 'Nationality', ['class' => 'control-label']) !!}
-		<!--TODO: Manage the COuntry names a-->
-		{!! Form::select('nationality', ['Malaysia','Singapore'] , null , ['class' => 'form-control']) !!}
+		{!! Form::select('nationality', $countries , 131 , ['class' => 'form-control']) !!}
 		{!! Form::label('client_role', 'Client Type', ['class' => 'control-label']) !!}
-		{!! Form::select('client_role', ['owner','tenant','buyer'] , null , ['class' => 'form-control']) !!}
-	
+		{!! Form::select('client_role', ['owner','tenant','buyer'] , 2 , ['class' => 'form-control']) !!}
+
 		{!! Form::submit('Submit', ['class' => 'form-control']) !!}
 		
 	{!! Form::close() !!}

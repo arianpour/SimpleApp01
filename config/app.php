@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Webpatser\Countries\CountriesServiceProvider',
         //'Laravel\Socialite\SocialiteServiceProvider',
 
 		/*
@@ -198,6 +199,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
         'HTML'      => 'Illuminate\Html\HtmlFacade',
+        'Countries' => 'Webpatser\Countries\CountriesFacade',
+
         //'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 
 	],

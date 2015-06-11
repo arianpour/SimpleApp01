@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Webpatser\Countries\Countries;
 
 class ClientController extends Controller {
 
@@ -31,8 +32,8 @@ class ClientController extends Controller {
 	 */
 	public function create()
 	{
-
-		return view('forms.createClient');
+        $countries=Countries::lists('full_name');
+		return view('forms.createClient',compact('countries'));
 	}
 
 	/**
@@ -40,10 +41,10 @@ class ClientController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $requests)
 	{
-        //TODO: Store form data
-		return 'yes';
+       // $user= new Client([]);
+		return $requests->firstName;
 	}
 
 	/**
@@ -90,5 +91,11 @@ class ClientController extends Controller {
 	{
 		//
 	}
+
+    public function test(){
+        $t=Countries::lists('full_name');
+        return $t;
+        //return view('test',compact('t'));
+    }
 
 }

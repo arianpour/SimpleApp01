@@ -15,6 +15,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('test','ClientController@test');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('clients', 'ClientController@index');
